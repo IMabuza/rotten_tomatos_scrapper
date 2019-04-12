@@ -78,7 +78,7 @@ for items in left_col:
         Percentage = items.findAll("span",{"class":"tMeterScore"})
         moviePercentage = Percentage[0].text
         moviePercentage = moviePercentage.replace("%","")
-        percentage_list.append(int(moviePercentage))
+        percentage_list.append(float(moviePercentage))
 
     except:
         percentage_list.append(0)
@@ -91,7 +91,7 @@ for items in right_col:
     gross = items.a.text
     gross = gross.replace("M","")
     gross = gross.replace("$","")
-    gross_list.append(gross)
+    gross_list.append(float(gross))
 
 data = {"Movies": title_list, "Percentage": percentage_list, "Gross": gross_list}
 
