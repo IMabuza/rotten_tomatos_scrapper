@@ -50,7 +50,7 @@ for items in middle_col:
 
 #create df
 
-data = {"Movies": title_list, "Percentage": percentage_list}
+data = {"Movies": title_list, "Rating(%)": percentage_list}
 
 df = pd.DataFrame.from_dict(data)
 
@@ -93,7 +93,7 @@ for items in right_col:
     gross = gross.replace("$","")
     gross_list.append(float(gross))
 
-data = {"Movies": title_list, "Percentage": percentage_list, "Gross": gross_list}
+data = {"Movies": title_list, "Rating(%)": percentage_list, "Revenue": gross_list}
 
 df = pd.DataFrame.from_dict(data)
 
